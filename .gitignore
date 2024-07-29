@@ -2,10 +2,11 @@
 __pycache__/
 *.py[oc]
 build/
-dist/
-wheels/
+
 *.egg-info
 
 # venv
 .venv
 /.idea
+dist/.DS_Store
+dist/async_provider_etl-0.1.0.tar.gz
