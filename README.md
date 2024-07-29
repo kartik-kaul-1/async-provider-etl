@@ -11,7 +11,7 @@ SQLite databases.
 - **Parallel Data Processing**: Leverages `asyncio`, `ProcessPoolExecutor` and `ThreadPoolExecutor` for 
   concurrent and parallel 
   processing.
-- **SQLite Integration**: Stores metadata and processed data in SQLite databases, ensuring efficient data management and retrieval.
+- **SQLite Integration**: Stores metadata and processed data in SQLite databases using `aiosqlite`, ensuring efficient, non-blocking queries to the embedded database.
 - **Command-Line Interface**: Configurable via CLI arguments for verbose logging.
 
 ## Installation
