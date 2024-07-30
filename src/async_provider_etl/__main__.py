@@ -17,14 +17,13 @@ from .util import (
     read_csv,
     write_to_sqlite,
     update_metadata_for_files,
-    ASCII_ART,
 )
 
 # Configuration settings; in the future USE `argparse` to configure this to be run from CLI
 BASE_URL: Final[str] = (
     "https://data.cms.gov/provider-data/api/1/metastore/schemas/dataset/items"
 )
-OUTPUT_DIR: Final[Path] = Path.cwd() / "data/hospital_files"
+OUTPUT_DIR: Final[Path] = Path.cwd().parent.parent / "data/hospital_files"
 # Create the output directory if it doesn't exist
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 # Create the RAW directory if it doesn't exist
@@ -34,12 +33,12 @@ RAW_DIR.mkdir(parents=True, exist_ok=True)
 TRANSFORMED_DIR: Final[Path] = OUTPUT_DIR / "transformed"
 TRANSFORMED_DIR.mkdir(parents=True, exist_ok=True)
 # Create the SQLite directory if it doesn't exist
-METADATA_DB_PATH: Final[Path] = Path.cwd() / "data/metadata_database"
+METADATA_DB_PATH: Final[Path] = Path.cwd().parent.parent / "data/metadata_database"
 METADATA_DB_PATH.mkdir(parents=True, exist_ok=True)
 # name of the metadata database
 METADATA_DB_NAME: Final[str] = "metadata.db"
 # hospital_database is the name of the SQLite database that will store the transformed data
-HOSPITAL_DB_PATH: Final[Path] = Path.cwd() / "data/hospital_database"
+HOSPITAL_DB_PATH: Final[Path] = Path.cwd().parent.parent / "data/hospital_database"
 HOSPITAL_DB_PATH.mkdir(parents=True, exist_ok=True)
 # name of the metadata database
 HOSPITAL_DB_NAME: Final[str] = "hospital.db"
@@ -59,7 +58,6 @@ print_updates_to_console: Annotated[
 
 
 async def main() -> None:
-    print(ASCII_ART)
     # Create the metadata database if it doesn't exist
     metadata_db_file = METADATA_DB_PATH / METADATA_DB_NAME
     # Connect to the SQLite database asynchronously using aiosqlite
