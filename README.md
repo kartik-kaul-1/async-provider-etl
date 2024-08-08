@@ -32,5 +32,5 @@ $ pipx install "dist/async_provider_etl-0.1.0-py3-none-any.whl"
 Then to trigger the ETL job, simply call the installed package:
 
 ```bash
-$ async_provider_etl
+$ async-provider-etl
 ```

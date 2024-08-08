@@ -23,7 +23,7 @@ from .util import (
 BASE_URL: Final[str] = (
     "https://data.cms.gov/provider-data/api/1/metastore/schemas/dataset/items"
 )
-OUTPUT_DIR: Final[Path] = Path.cwd().parent.parent / "data/hospital_files"
+OUTPUT_DIR: Final[Path] = Path.cwd() / "data/hospital_files"
 # Create the output directory if it doesn't exist
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 # Create the RAW directory if it doesn't exist
@@ -33,12 +33,12 @@ RAW_DIR.mkdir(parents=True, exist_ok=True)
 TRANSFORMED_DIR: Final[Path] = OUTPUT_DIR / "transformed"
 TRANSFORMED_DIR.mkdir(parents=True, exist_ok=True)
 # Create the SQLite directory if it doesn't exist
-METADATA_DB_PATH: Final[Path] = Path.cwd().parent.parent / "data/metadata_database"
+METADATA_DB_PATH: Final[Path] = Path.cwd() / "data/metadata_database"
 METADATA_DB_PATH.mkdir(parents=True, exist_ok=True)
 # name of the metadata database
 METADATA_DB_NAME: Final[str] = "metadata.db"
 # hospital_database is the name of the SQLite database that will store the transformed data
-HOSPITAL_DB_PATH: Final[Path] = Path.cwd().parent.parent / "data/hospital_database"
+HOSPITAL_DB_PATH: Final[Path] = Path.cwd() / "data/hospital_database"
 HOSPITAL_DB_PATH.mkdir(parents=True, exist_ok=True)
 # name of the metadata database
 HOSPITAL_DB_NAME: Final[str] = "hospital.db"
