@@ -3,7 +3,6 @@ import asyncio
 import threading
 from argparse import ArgumentParser
 from multiprocessing import cpu_count
-from timeit import timeit
 from typing import Final, Annotated
 from aiohttp import ClientSession
 from aiosqlite import connect, Cursor
