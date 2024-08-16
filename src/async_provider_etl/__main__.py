@@ -123,7 +123,7 @@ async def main() -> None:
 
     hospital_db_file = HOSPITAL_DB_PATH / HOSPITAL_DB_NAME
     loop = asyncio.get_running_loop()
-    csv_file_paths = [file for file in updated_files if file.suffix == ".csv"]
+    csv_file_paths = [file for file in TRANSFORMED_DIR.iterdir() if file.suffix == ".csv"]
     # Utilize multiprocessing to read CSV files in parallel
     with ProcessPoolExecutor(max_workers=cpu_count()) as process_executor:
         if print_updates_to_console:
