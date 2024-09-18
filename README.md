@@ -17,12 +17,8 @@ SQLite databases.
 ## Installation
 
 > ### Prerequisite
+  >If [`pipx`](https://github.com/pypa/pipx) is not already installed, you will need to [install it](https://pipx.pypa.io/stable/#install-pipx) .
 
-  >If [`pipx`](https://github.com/pypa/pipx) is not already installed, you can install it using [`pipx-in-pipx`](https://github.com/mattsb42-meta/pipx-in-pipx):
-
-  ```bash
-  $ pip install pipx-in-pipx
-  ```
 
 To install the `.whl` file using `pipx`, you can use the following command:
 
