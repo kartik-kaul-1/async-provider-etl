@@ -2,7 +2,7 @@
 
 ## Overview
 `async-provider-etl` is a Python package designed to perform ETL operations on hospital CMS data using asynchronous 
-and parallel processing. The package downloads datasets concurrently, processes the resultant dataframes in parallel, and stores the hospital data & 
+and parallel processing. The package downloads datasets _concurrently_, processes the resultant dataframes _in parallel_, and stores the hospital data & 
 associated metadata in SQLite databases.
 
 ## Features
